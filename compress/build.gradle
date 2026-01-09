@@ -11,10 +11,10 @@ buildscript {
 }
 
 android {
-    compileSdk 34
+    compileSdk cfgs.compileSdk
     namespace "top.zibin.luban"
     defaultConfig {
-        minSdk 14
+        minSdk cfgs.minSdk
 
     }
     buildTypes {

@@ -31,9 +31,9 @@ ext {
             // coil
             coil_version                  : "2.1.0",
 
-            compileSdk                    : "34",
+            compileSdk                    : 34,
 
-            minSdk                        : "21"
+            minSdk                        : 21
 
     ]
 }

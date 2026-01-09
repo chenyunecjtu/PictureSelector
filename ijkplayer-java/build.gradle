@@ -3,15 +3,15 @@ apply plugin: 'com.android.library'
 android {
     // http://tools.android.com/tech-docs/new-build-system/tips
     //noinspection GroovyAssignabilityCheck
-    compileSdkVersion 30
+    compileSdkVersion cfgs.compileSdk
     //noinspection GroovyAssignabilityCheck
     namespace "tv.danmaku.ijk.media.player"
     lintOptions {
         abortOnError false
     }
     defaultConfig {
-        minSdkVersion 9
-        targetSdkVersion 30
+        minSdkVersion cfgs.minSdk
+
     }
     buildTypes {
         release {

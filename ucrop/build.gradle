@@ -1,10 +1,10 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdk 34
+    compileSdk  cfgs.compileSdk
     namespace "com.yalantis.ucrop"
     defaultConfig {
-        minSdk 19
+        minSdk cfgs.minSdk
         vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
