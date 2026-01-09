@@ -12,7 +12,6 @@ import android.os.IBinder;
 
 import androidx.core.app.NotificationCompat;
 
-import com.luck.picture.lib.BuildConfig;
 import com.luck.picture.lib.R;
 import com.luck.picture.lib.config.SelectorConfig;
 import com.luck.picture.lib.config.SelectMimeType;
@@ -25,8 +24,8 @@ import com.luck.picture.lib.utils.SdkVersionUtils;
  * @describe：ForegroundService
  */
 public class ForegroundService extends Service {
-    private static final String CHANNEL_ID = BuildConfig.LIBRARY_PACKAGE_NAME + "." + ForegroundService.class.getName();
-    private static final String CHANNEL_NAME = BuildConfig.LIBRARY_PACKAGE_NAME;
+    private static final String CHANNEL_ID = "com.luck.picture.lib" + "." + ForegroundService.class.getName();
+    private static final String CHANNEL_NAME = "com.luck.picture.lib";
     private static final int NOTIFICATION_ID = 1;
     private static boolean isForegroundServiceIng = false;
 

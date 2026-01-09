@@ -8,11 +8,11 @@ static def releaseTime() {
 
 android {
     compileSdk 34
+    namespace "com.luck.pictureselector"
 
     defaultConfig {
         applicationId "com.luck.pictureselector"
         minSdk 21
-        targetSdk 34
         versionCode cfgs.versionCode
         versionName cfgs.versionName
     }
@@ -24,6 +24,10 @@ android {
             keyAlias "picture"
             keyPassword "luck888A"
         }
+    }
+
+    buildFeatures {
+        buildConfig = true      // 如果需要 BuildConfig
     }
 
     buildTypes {
@@ -59,9 +63,9 @@ android {
         }
     }
 
-    dexOptions {
-        javaMaxHeapSize "4g"
-    }
+//    dexOptions {
+//        javaMaxHeapSize "4g"
+//    }
 
     lintOptions {
         checkReleaseBuilds false
@@ -69,9 +73,11 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
+
+
 }
 
 dependencies {

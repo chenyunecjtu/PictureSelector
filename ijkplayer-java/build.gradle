@@ -5,8 +5,7 @@ android {
     //noinspection GroovyAssignabilityCheck
     compileSdkVersion 30
     //noinspection GroovyAssignabilityCheck
-    buildToolsVersion "30.0.3"
-
+    namespace "tv.danmaku.ijk.media.player"
     lintOptions {
         abortOnError false
     }
@@ -18,6 +17,12 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
         }
     }
 }

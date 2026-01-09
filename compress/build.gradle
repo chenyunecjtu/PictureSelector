@@ -2,6 +2,7 @@ apply plugin: 'com.android.library'
 
 buildscript {
     repositories {
+        maven { url "https://nexus.mobase.cn/repository/central/" }
         jcenter()
     }
     dependencies {
@@ -10,16 +11,22 @@ buildscript {
 }
 
 android {
-    compileSdkVersion 27
-
+    compileSdk 34
+    namespace "top.zibin.luban"
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 27
+        minSdk 14
+
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
         }
     }
 }

@@ -21,7 +21,7 @@ import com.luck.lib.camerax.utils.FileUtils;
  */
 public class SimpleCameraX {
 
-    private static final String EXTRA_PREFIX = BuildConfig.LIBRARY_PACKAGE_NAME;
+    private static final String EXTRA_PREFIX = "com.luck.picture.lib";
 
     public static final String EXTRA_OUTPUT_PATH_DIR = EXTRA_PREFIX + ".OutputPathDir";
 
